@@ -10,3 +10,4 @@ birthday-tracker/
 │   ├── birthdays.js    # Lógica de cumpleaños
 │   └── main.js         # Lógica principal
 └── data/               # Carpeta para almacenar datos (simulado)
+ 
