@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Cumpleaños</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gestor de Cumpleaños</h1>
+            <button id="logout-btn" class="btn">Cerrar Sesión</button>
+        </header>
+        
+        <div class="main-menu" id="main-menu">
+            <h2>Bienvenido, <span id="username-display"></span></h2>
+            <button class="btn menu-btn" data-action="view">Ver Lista</button>
+            <button class="btn menu-btn" data-action="create">Crear Cumpleaños</button>
+            <button class="btn menu-btn" data-action="edit">Modificar Cumpleaños</button>
+        </div>
+        
+        <div class="view-menu hidden" id="view-menu">
+            <h2>Lista de Cumpleaños</h2>
+            <div class="birthday-list" id="birthday-list">
+                <!-- Aquí se cargarán los cumpleaños dinámicamente -->
+            </div>
+            <button class="btn back-btn">Volver al Menú</button>
+        </div>
+        
+        <div class="create-menu hidden" id="create-menu">
+            <h2>Crear Nuevo Cumpleaños</h2>
+            <form id="create-form">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Fecha de Cumpleaños:</label>
+                    <input type="date" id="date" required>
+                </div>
+                <button type="submit" class="btn">Guardar</button>
+                <button type="button" class="btn back-btn">Cancelar</button>
+            </form>
+        </div>
+        
+        <div class="edit-menu hidden" id="edit-menu">
+            <h2>Modificar Cumpleaños</h2>
+            <div class="edit-list" id="edit-list">
+                <!-- Aquí se cargarán los cumpleaños para editar -->
+            </div>
+            <button class="btn back-btn">Volver al Menú</button>
+        </div>
+    </div>
+    
+    <script src="js/auth.js"></script>
+    <script src="js/birthdays.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
